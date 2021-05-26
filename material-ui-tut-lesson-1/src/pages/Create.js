@@ -2,6 +2,7 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
+import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 
 
 export default function Create() {
@@ -15,6 +16,7 @@ export default function Create() {
       </Typography>
       <Button type="submit" color="secondary" variant="contained"
         onClick={()=> submitHandler()}
+        endIcon={<KeyboardArrowRightIcon/>}
       >
         Submit
       </Button>

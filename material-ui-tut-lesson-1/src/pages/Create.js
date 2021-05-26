@@ -4,6 +4,7 @@ import ButtonGroup from '@material-ui/core/ButtonGroup';
 
 export default function Create() {
   function clickHandler(){
+    alert("Form submitted successfully");
   }
   return (
     <div>

@@ -5,7 +5,9 @@ import Button from '@material-ui/core/Button';
 import Container from '@material-ui/core/Container';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import TextField from '@material-ui/core/TextField';
-import {AccordionDetails, makeStyles} from '@material-ui/core';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import Radio from '@material-ui/core/Radio';
+import { FormControl, FormControlLabel, FormLabel, makeStyles} from '@material-ui/core';
 
 
 const useStyles= makeStyles({
@@ -33,7 +35,7 @@ export default function Create() {
     details === "" && setDetailsError(true);
       e.preventDefault();
       ( (title && details) && (
-        console.log("title:", title,"details:",details)
+        console.log({"title":title,"details":details, "category":category})
       ))
   }
 
@@ -41,6 +43,7 @@ export default function Create() {
   const [details,setDetails] = useState("");
   const [titleError,setTitleError] = useState(false);
   const [detailsError,setDetailsError] = useState(false);
+  const [category,setCategory] = useState("Todos");
   return (
     <Container>
       <Typography variant="h6" component="h2" color="textSecondary" gutterBottom
@@ -67,6 +70,16 @@ export default function Create() {
           rows={4}
           error={detailsError}
         />
+
+        <FormControl className={classes.field} >
+          <FormLabel color="primary">Note Category</FormLabel>  
+          <RadioGroup value={category} onChange={(e)=> setCategory(e.target.value)}>
+            <FormControlLabel control={<Radio/>} label="Todos" value="Todos"/>
+            <FormControlLabel control={<Radio/>} label="Reminders" value="Reminders"/>
+            <FormControlLabel control={<Radio/>} label="Appointments" value="Appointments"/>
+            <FormControlLabel control={<Radio/>} label="Work" value="Work"/>
+          </RadioGroup>
+        </FormControl>
 
       <Button type="submit" color="secondary" variant="contained"
         // onClick={()=> submitHandler()}

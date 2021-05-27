@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import {useState} from 'react';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
@@ -7,7 +8,7 @@ import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import TextField from '@material-ui/core/TextField';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import Radio from '@material-ui/core/Radio';
-import { FormControl, FormControlLabel, FormLabel, makeStyles} from '@material-ui/core';
+import { FormControl, FormControlLabel, FormLabel, makeStyles } from '@material-ui/core';
 
 
 const useStyles= makeStyles({
@@ -34,8 +35,13 @@ export default function Create() {
     title === "" && setTitleError(true);
     details === "" && setDetailsError(true);
       e.preventDefault();
-      ( (title && details) && (
-        console.log({"title":title,"details":details, "category":category})
+      ( (title && details && category) && (
+        (async function(){
+          await axios.post('http://localhost:8000/notes',{
+            title,details,category
+          })
+          console.log({"title":title,"details":details, "category":category})
+        })()
       ))
   }
 

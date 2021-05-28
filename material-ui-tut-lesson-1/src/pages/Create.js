@@ -8,6 +8,8 @@ import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import TextField from '@material-ui/core/TextField';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import Radio from '@material-ui/core/Radio';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { FormControl, FormControlLabel, FormLabel, makeStyles } from '@material-ui/core';
 
 
@@ -21,6 +23,12 @@ const useStyles= makeStyles({
     display: "block"
   }
 })
+
+const notify = () => toast.info("Added to your notes" ,{
+  position: "top-right",
+  autoClose: 3000,
+  hideProgressBar: true,
+  closeOnClick: true});
 
 export default function Create() {
 
@@ -87,13 +95,13 @@ export default function Create() {
           </RadioGroup>
         </FormControl>
 
-      <Button type="submit" color="secondary" variant="contained"
-        // onClick={()=> submitHandler()}
+      <Button type="submit" color="primary" variant="contained"
+        onClick={()=> notify()}
         endIcon={<KeyboardArrowRightIcon/>}
       >
         Submit
       </Button>
-
+      <ToastContainer />
       </form>
       
     </Container>

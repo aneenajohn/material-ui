@@ -3,19 +3,19 @@
     {
       "title": "beach party at 8pm",
       "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "category": "reminders",
+      "category": "Reminders",
       "id": 1
     },
     {
       "title": "Fill the bottles",
       "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "category": "todos",
+      "category": "Todos",
       "id": 3
     },
     {
       "title": "Complete quiz app",
       "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took.",
-      "category": "work",
+      "category": "Work",
       "id": 4
     },
     {
@@ -23,6 +23,36 @@
       "details": "Regular eye checkup",
       "category": "Appointments",
       "id": 5
+    },
+    {
+      "title": "Complete backend for apps",
+      "details": "Complete your projects asap",
+      "category": "Work",
+      "id": 6
+    },
+    {
+      "title": "Groceries",
+      "details": "Grab the veggies from store.\nBread and jam\nOrange Cheetos",
+      "category": "Todos",
+      "id": 7
+    },
+    {
+      "title": "Bday Wish",
+      "details": "June 2 - sam's bday",
+      "category": "Reminders",
+      "id": 8
+    },
+    {
+      "title": "Workout",
+      "details": "Complete 6000 steps\nDo yoga",
+      "category": "Todos",
+      "id": 9
+    },
+    {
+      "title": "Household",
+      "details": "Clean the room\nDo the dishes",
+      "category": "Todos",
+      "id": 10
     }
   ]
 }

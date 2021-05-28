@@ -8,8 +8,10 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
+import Avatar from '@material-ui/core/Avatar';
 import { AddCircleOutlineOutlined, SubjectOutlined } from '@material-ui/icons';
 import { useHistory, useLocation } from 'react-router';
+import {format} from 'date-fns';
 
 const drawerWidth = 240;
 const useStyles= makeStyles( (theme) => {
@@ -38,7 +40,13 @@ const useStyles= makeStyles( (theme) => {
             width: `calc(100% - ${drawerWidth}px)`,
             marginLeft: drawerWidth,
           },
-        toolbar: theme.mixins.toolbar
+        toolbar: theme.mixins.toolbar,
+        date:{
+            flexGrow:1 
+        },
+        avatar:{
+            marginLeft:theme.spacing(2)
+        }
     }   
 }
 )
@@ -64,8 +72,11 @@ export default function Layout({children}) {
             {/* App bar */}
             <AppBar  className={classes.appBar}> 
                 <Toolbar>
-                    <Typography>Get your note anywhere, anytime!</Typography>
+                    <Typography className={classes.date}>{format (new Date(),'do MMMM Y')}</Typography>
+                    <Typography>Mr.Bean</Typography>
+                    <Avatar src="bean.jpg" className={classes.avatar}/>
                 </Toolbar>
+                
             </AppBar>
             {/* Side drawer */}
             <Drawer

@@ -46,6 +46,9 @@ export default function Layout({children}) {
                     <ListItem>
                         <ListItemText> Create Note </ListItemText>
                     </ListItem>
+                    <ListItem>
+                        <ListItemText> About </ListItemText>
+                    </ListItem>
                 </List>
             </Drawer>
             <div className={classes.page}>

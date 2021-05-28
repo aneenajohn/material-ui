@@ -76,7 +76,6 @@ export default function Layout({children}) {
                     <Typography>Mr.Bean</Typography>
                     <Avatar src="bean.jpg" className={classes.avatar}/>
                 </Toolbar>
-                
             </AppBar>
             {/* Side drawer */}
             <Drawer

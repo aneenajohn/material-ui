@@ -45,7 +45,7 @@ export default function Create() {
       e.preventDefault();
       ( (title && details && category) && (
         (async function(){
-          await axios.post('http://localhost:8000/notes',{
+          await axios.post('https://lit-lake-31949.herokuapp.com/',{
             title,details,category
           })
           console.log({"title":title,"details":details, "category":category})

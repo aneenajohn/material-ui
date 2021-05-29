@@ -19,14 +19,14 @@ export default function Notes() {
   const classes = useStyles();
   useEffect(() => {
     ( async function(){
-      const {data} = await axios.get("http://localhost:8000/notes");
-      setNotes(data);
-      // console.log(data);
+      const {data} = await axios.get("https://lit-lake-31949.herokuapp.com/");
+      setNotes(data.data.notesDB.notes);
+      console.log(data.data.notesDB.notes);
     })()
   }, [])
 
   const handleDelete = async (id) => {
-    await axios.delete("http://localhost:8000/notes/"+id);
+    await axios.delete("https://lit-lake-31949.herokuapp.com/"+id);
     const newNotes = notes.filter(note => note.id !== id);
     setNotes(newNotes);
   }

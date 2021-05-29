@@ -37,22 +37,16 @@
       "id": 7
     },
     {
-      "title": "Bday Wish",
-      "details": "June 2 - sam's bday",
-      "category": "Reminders",
-      "id": 8
-    },
-    {
-      "title": "Workout",
-      "details": "Complete 6000 steps\nDo yoga",
-      "category": "Todos",
-      "id": 9
-    },
-    {
       "title": "Household",
       "details": "Clean the room\nDo the dishes",
       "category": "Todos",
       "id": 10
+    },
+    {
+      "title": "Pending Work",
+      "details": "Complete playlist frontend functionality",
+      "category": "Work",
+      "id": 12
     }
   ]
 }

@@ -32,7 +32,7 @@ export default function NoteCard({note,handleDelete}) {
     const classes= useStyles(note);
     return (
         <Container>
-            <Card elevation={3} >
+            <Card elevation={3}>
                 <CardHeader 
                     avatar={
                         <Avatar className={classes.avatar}>{category[0].toUpperCase()}</Avatar>

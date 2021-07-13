@@ -1,6 +1,5 @@
-# material-ui
+# Notes App
 
 #### Future Enhancements:
- - Convert JSON serv to Express(done)
  - Add POST path in BE
 

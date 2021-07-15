@@ -19,7 +19,7 @@ export default function Notes() {
   const classes = useStyles();
   useEffect(() => {
     ( async function(){
-      const {data} = await axios.get("https://notes-app-backend.aneenasam.repl.co/notes");
+      const {data} = await axios.get(`${process.env.REACT_APP_BACKEND_API}/notes`);
       // setNotes(data.data.notesDB.notes);
       // console.log(data.data.notesDB.notes);
       if(data.success){
@@ -30,7 +30,7 @@ export default function Notes() {
   }, [])
 
   const handleDelete = async (id) => {
-    await axios.delete(`https://notes-app-backend.aneenasam.repl.co/notes/${id}`);
+    await axios.delete(`${process.env.REACT_APP_BACKEND_API}/notes/${id}`);
     const newNotes = notes.filter(note => note._id !== id);
     setNotes(newNotes);
   }

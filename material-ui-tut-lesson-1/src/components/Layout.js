@@ -119,8 +119,7 @@ export default function Layout({children}) {
 
     return (
         <div className={classes.root}>
-            {/* App bar */}
-            <AppBar  className={classes.appBar}> 
+            <AppBar  className={classes.appBar}>
                 <Toolbar>
                     <IconButton
                         color="inherit"
@@ -136,7 +135,6 @@ export default function Layout({children}) {
                     <Avatar src="bean.jpg" className={classes.avatar}/>
                 </Toolbar>
             </AppBar>
-            {/* Side drawer */}
             <Hidden smUp implementation="css">
             <Drawer
                 // container={container}

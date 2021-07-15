@@ -19,15 +19,19 @@ export default function Notes() {
   const classes = useStyles();
   useEffect(() => {
     ( async function(){
-      const {data} = await axios.get("https://lit-lake-31949.herokuapp.com/");
-      setNotes(data.data.notesDB.notes);
-      console.log(data.data.notesDB.notes);
+      const {data} = await axios.get("https://notes-app-backend.aneenasam.repl.co/notes");
+      // setNotes(data.data.notesDB.notes);
+      // console.log(data.data.notesDB.notes);
+      if(data.success){
+        setNotes(data.notes);
+      }
+     
     })()
   }, [])
 
   const handleDelete = async (id) => {
-    await axios.delete("https://lit-lake-31949.herokuapp.com/"+id);
-    const newNotes = notes.filter(note => note.id !== id);
+    await axios.delete(`https://notes-app-backend.aneenasam.repl.co/notes/${id}`);
+    const newNotes = notes.filter(note => note._id !== id);
     setNotes(newNotes);
   }
   const breakpointColumnsObj={

@@ -28,7 +28,7 @@ const  useStyles = makeStyles({
     }
 })
 export default function NoteCard({note,handleDelete}) {
-    const {id,title,details,category} = note;
+    const {_id,title,details,category} = note;
     const classes= useStyles(note);
     return (
         <Container>
@@ -39,7 +39,7 @@ export default function NoteCard({note,handleDelete}) {
                     }
                     action={
                     <IconButton aria-label="settings"
-                        onClick={()=>handleDelete(id)}
+                        onClick={()=>handleDelete(_id)}
                     >
                     <DeleteOutlined />
                     </IconButton>

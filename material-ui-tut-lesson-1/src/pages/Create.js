@@ -24,7 +24,7 @@ const useStyles= makeStyles({
   }
 })
 
-const notify = () => toast.info("Added to your notes" ,{
+const notify = () => toast.success("Added to your notes" ,{
   position: "top-right",
   autoClose: 3000,
   hideProgressBar: true,
@@ -33,9 +33,7 @@ const notify = () => toast.info("Added to your notes" ,{
 export default function Create() {
 
   const classes= useStyles();
-  // function submitHandler(){
-  //   alert('Note submitted successfully');
-  // }
+  // console.log(process.env.REACT_APP_BACKEND_API);
 
   const handleSubmit = (e) =>{
     setTitleError(false);
@@ -45,7 +43,7 @@ export default function Create() {
       e.preventDefault();
       ( (title && details && category) && (
         (async function(){
-          await axios.post('https://lit-lake-31949.herokuapp.com/',{
+          await axios.post(`${process.env.REACT_APP_BACKEND_API}/notes`,{
             title,details,category
           })
           console.log({"title":title,"details":details, "category":category})
